@@ -1,0 +1,24 @@
+{
+  "name": "com.devpenguin.objectpoolutilities",
+  "version": "0.0.1",
+  "unity": "6000.2",
+  "displayName": "Dev Penguin Object Pool Utilities",
+  "description": "Object Pooling package for Unity. Has a manager for multiple generic object and component pools. Uses UnityEngine.Pool.",
+  "keywords": [
+    "utility",
+    "utilities",
+    "tool",
+    "optimization"
+  ],
+  "dependencies": {
+  },
+  "relatedPackages": {
+  },
+  "samples": [
+    {
+      "displayName": "Orbs",
+      "description": "Simple orb spawner that spawns orbs when clicked and uses Object Pool Manager.",
+      "path": "Samples~/Orbs"
+    }
+  ]
+}

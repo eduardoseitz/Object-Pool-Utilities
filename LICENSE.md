@@ -1,4 +1,4 @@
-com.unity.2d.animation copyright © 2023 Unity Technologies ApS
+com.devpenguin.objectpoolutilities copyright © 2026 Dev Penguin Games
 
 Licensed under the Unity Companion License for Unity-dependent projects (see https://unity3d.com/legal/licenses/unity_companion_license).
 
