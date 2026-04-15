@@ -8,9 +8,11 @@ namespace DevPenguin.ObjectPoolUtilities
         #region Declarations
         
         [SerializeField] private string label;
-        [SerializeField] private int minSize = 10;
-        [SerializeField] private bool hasMaxSize = true;
-        [SerializeField] private int maxSize = 100;
+        // TODO: Implement minSize
+        // [SerializeField] private int minSize = 10;
+        // [SerializeField] private bool hasMaxSize = true;
+        // TODO: Implement maxSize
+        // [SerializeField] private int maxSize = 100;
         
         #endregion
 
@@ -18,11 +20,11 @@ namespace DevPenguin.ObjectPoolUtilities
         
         public string Label => label;
         
-        public int MinSize => minSize;
-
-        public bool HasMaxSize => hasMaxSize;
-
-        public int MaxSize => maxSize;
+        // public int MinSize => minSize;
+        
+        // public bool HasMaxSize => hasMaxSize;
+        
+        //public int MaxSize => maxSize;
         
         public GameObject Empty { get; set; }
         
