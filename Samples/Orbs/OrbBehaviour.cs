@@ -1,3 +1,4 @@
+using DevPenguin.ObjectPoolUtilities;
 using UnityEngine;
 
 public class OrbBehaviour : MonoBehaviour
@@ -11,6 +12,10 @@ public class OrbBehaviour : MonoBehaviour
 
     private void DestroyAfterSeconds()
     {
-        Destroy(gameObject);
+        // Old way to destroy.
+        //Destroy(gameObject);
+        
+        // Pooled way to destroy.
+        PoolManager.ReturnObjectToPool(gameObject);
     }
 }
