@@ -4,6 +4,7 @@ using UnityEngine;
 public class OrbBehaviour : MonoBehaviour
 {
     public float destroyAfterSeconds = 2.5f;
+    public ObjectPoolTypes objectPoolTypes;
     
     private void Start()
     {
@@ -16,6 +17,6 @@ public class OrbBehaviour : MonoBehaviour
         //Destroy(gameObject);
         
         // Pooled way to destroy.
-        PoolManager.ReturnObjectToPool(gameObject);
+        PoolManager.Instance.ReturnObjectToPool(gameObject, (int)objectPoolTypes);
     }
 }

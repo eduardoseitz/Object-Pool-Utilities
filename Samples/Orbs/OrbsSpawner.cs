@@ -1,11 +1,12 @@
-using DevPenguin.ObjectPoolUtilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DevPenguin.ObjectPoolUtilities;
 
 public class OrbsSpawner : MonoBehaviour
 {
     public InputActionReference clickInput;
-    public Rigidbody2D orbPrefab;
+    public GameObject redOrbPrefab;
+    public Rigidbody2D greenOrbPrefab;
     
     private void Update()
     {
@@ -14,11 +15,19 @@ public class OrbsSpawner : MonoBehaviour
             Vector2 _mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             
             // Old way to instantiate.
-            //Instantiate(orbPrefab, _mousePosition, Quaternion.identity);
+            //Instantiate(redOrbPrefab, _mousePosition, Quaternion.identity);
+            //Rigidbody2D greenOrbPrefab = Instantiate(greenOrbPrefab, _mousePosition, Quaternion.identity).GetComponent<Rigidbody2D>();
+            //greenOrbPrefab.gravityScale = 1;
             
             // Pooled way to instantiate.
-            Rigidbody2D rigidbody2D = PoolManager.SpawnObject(orbPrefab, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, PoolManager.PoolType.GameObjects);
-            rigidbody2D.gravityScale = 1;
+            PoolManager.Instance.SpawnObject(redOrbPrefab, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, (int)ObjectPoolTypes.RedOrb);
+            Rigidbody2D greenOrb = PoolManager.Instance.SpawnObject(greenOrbPrefab, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, (int)ObjectPoolTypes.GreenOrb);
+            greenOrb.gravityScale = 1;
         }
     }
+}
+
+public enum ObjectPoolTypes{
+    RedOrb,
+    GreenOrb
 }
