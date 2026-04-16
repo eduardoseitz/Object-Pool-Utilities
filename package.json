@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "displayName": "Dev Penguin Object Pool Utilities",
   "unity": "6000.2.10",
-  "description": "Object Pooling package for Unity. Has a manager for multiple generic object and component pools. Uses UnityEngine.Pool.",
+  "description": "An Object Pooling package for Unity. Has a manager for multiple generic object and component pools. Uses UnityEngine.Pool.",
   "author": {
     "name": "DevPenguin",
     "email": "devpenguingames@gmail..com",
